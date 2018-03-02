@@ -6,7 +6,7 @@ class Block {
     constructor(transaction, prevHash) {
         this.transaction = transaction;
         this.prevHash = prevHash;
-        this.hash = this.hashIt();
+        this.hash = sha((this.transaction.sender + this.transaction.recipient + this.transaction.value + this.prevHash)).toString();
         this.timestamp = this.getToday();
         this.nonce = 0;
     }
