@@ -1,1 +1,3 @@
 # SimpleBlockchain
+
+node example.js
